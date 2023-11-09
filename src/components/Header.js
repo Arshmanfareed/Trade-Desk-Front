@@ -21,8 +21,10 @@ function Header() {
             className="navbar navbar-expand-lg navbar-light bg-body-tertiary"
             expand="lg"
           >
-            <Navbar.Brand to="/" className="navbar-brand" href="/">
-              <h1 className="text-white">Your Trade Desk</h1>
+            <Navbar.Brand className="navbar-brand" href="/">
+              <Link className=" home-link" to="/">
+                <h1 className="text-white">Your Trade Desk</h1>
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
 

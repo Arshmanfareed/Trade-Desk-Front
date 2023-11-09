@@ -15,7 +15,9 @@ function Footer() {
               <h3>Information</h3>
               <ul>
                 <li>
-                  <a href="javascript:void(0);">Sign Up</a>
+                <Link className="" to="/register">
+                  Sign Up
+                </Link>
                 </li>
                 <li>
                   <Link className="" to="/about">
@@ -27,7 +29,6 @@ function Footer() {
             <Col lg={4} md={4} sm={12}>
               <h3>Platform</h3>
               <ul>
-
                 <li>
                   <Link className="" to="/contact">
                     Contact

@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
+const apiURL = process.env.REACT_APP_API_URL;
 
 const LoginComponent = () => {
     const [email, setEmail] = useState('');
@@ -12,7 +13,7 @@ const LoginComponent = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/user-login', {
+            const response = await axios.post(`${apiURL}/api/user-login`, {
                 email: email,
                 password: password,
             });

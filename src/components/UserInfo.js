@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
+const apiURL = process.env.REACT_APP_API_URL;
 
 function UserInfo() {
     const [userData, setUserData] = useState([]);
@@ -12,8 +13,9 @@ function UserInfo() {
         const user_id = localStorage.getItem('user_id');        
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://127.0.0.1:8000/api/resource?user_id=${user_id}`);
+                const response = await axios.get(`${apiURL}/api/resource?user_id=${user_id}`);
                 console.log(response.data);
+                console.log(apiURL);
                 setUserData(response.data);
             } catch (error) {
                 console.error('Error:', error);

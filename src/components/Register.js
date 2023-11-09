@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import {Link} from "react-router-dom";
-
+const apiURL = process.env.REACT_APP_API_URL;
 
 const RegistrationForm = () => {
     const [formData, setFormData] = useState({
@@ -48,7 +48,7 @@ const RegistrationForm = () => {
 
     const sendDataToLaravel = (data) => {
         axios
-            .post('http://127.0.0.1:8000/api/send-data', {
+            .post(`${apiURL}/api/send-data`, {
                 name: data.name,
                 email: data.email,
                 password: data.password,
